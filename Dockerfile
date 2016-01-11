@@ -11,6 +11,7 @@ RUN apt-get update && \
         php5-mysql \
         php5-mcrypt \
         php5-gd \
+        php5-intl \
         php5-curl \
         php-pear \
         php-apc && \
