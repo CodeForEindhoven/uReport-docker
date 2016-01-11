@@ -14,7 +14,7 @@ RUN apt-get update && \
         php5-curl \
         php-pear \
         php-apc && \
-    rm -rf /var/lib/apt/lists/* && \
+    rm -rf /var/lib/apt/lists/*
 RUN /usr/sbin/php5enmod mcrypt
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
     sed -i "s/variables_order.*/variables_order = \"EGPCS\"/g" /etc/php5/apache2/php.ini
@@ -29,7 +29,7 @@ RUN chmod 755 /*.sh
 
 # Configure /webdir folder with sample app
 RUN mkdir -p /webdir && rm -fr /var/www/html && ln -s /webdir /var/www/html
-git clone https://github.com/City-of-Bloomington/uReport.git /webdir
+RUN git clone https://github.com/City-of-Bloomington/uReport.git /webdir
 
 EXPOSE 80
 WORKDIR /webdir
