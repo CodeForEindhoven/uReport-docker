@@ -3,8 +3,6 @@
  * Where on the filesystem this application is installed
  */
 define('APPLICATION_HOME', __DIR__);
-define('BASE_URI', '');
-define('JQUERY_UI', '');
 define('BLOSSOM', APPLICATION_HOME.'/libraries/Blossom');
 define('ZEND',    APPLICATION_HOME.'/libraries/zf2/library/Zend');
 define('SOLR',    APPLICATION_HOME.'/libraries/solr-php-client');

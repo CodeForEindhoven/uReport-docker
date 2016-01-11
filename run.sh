@@ -10,6 +10,8 @@ cp default /etc/apache2/sites-available/
 ln -s /etc/apache2/sites-enabled/000-default /etc/apache2/sites-available/default
 git submodule update -i
 
+
+
 source /etc/apache2/envvars
 tail -F /var/log/apache2/* &
 exec apache2 -D FOREGROUND

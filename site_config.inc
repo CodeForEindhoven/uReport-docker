@@ -7,7 +7,7 @@ define('LOCATION_NAME', 'City of Bloomington, Mark Kruzan, Mayor');
  * Do NOT use a trailing slash
  */
 define('BASE_URL','http://localhost/crm');
-define('BASE_URI','');
+define('BASE_URI','crm/public');
 
 /**
  * JavaScript Libraries
@@ -31,10 +31,10 @@ define('ADMINISTRATOR_EMAIL','admin@servername.com');
  * http://www.php.net/manual/en/pdo.drivers.php
  */
 define('DB_ADAPTER','Pdo_Mysql');
-define('DB_HOST','localhost');
-define('DB_NAME','application');
-define('DB_USER','application');
-define('DB_PASS','password');
+define('DB_HOST','db');
+define('DB_NAME','open311');
+define('DB_USER','root');
+define('DB_PASS','eindhoven');
 
 /**
  * Directory Configuration
@@ -91,8 +91,8 @@ define('NOTIFICATIONS_ENABLED',true);
 /**
  * Point to the Solr server
  */
-define('SOLR_SERVER_HOSTNAME', 'localhost');
-define('SOLR_SERVER_PORT', 8080);
+define('SOLR_SERVER_HOSTNAME', 'solr');
+define('SOLR_SERVER_PORT', 8983);
 define('SOLR_SERVER_PATH', '/solr/crm');
 
 
