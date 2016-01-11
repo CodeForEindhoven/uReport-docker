@@ -33,5 +33,7 @@ RUN git clone https://github.com/City-of-Bloomington/uReport.git /webdir
 
 EXPOSE 80
 WORKDIR /webdir
+COPY configuration.inc /webdir/crm/configuration.inc
+COPY site_config.inc /webdir/crm/data/site_config.inc
 
 CMD ["/run.sh"]
