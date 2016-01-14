@@ -1,13 +1,13 @@
 <?php
-define('APPLICATION_NAME','CRM');
-define('LOCATION_NAME', 'City of Bloomington, Mark Kruzan, Mayor');
+define('APPLICATION_NAME','__APPLICATION_NAME__');
+define('LOCATION_NAME', '__LOCATION_NAME__');
 
 /**
  * The URL to get to this site
  * Do NOT use a trailing slash
  */
-define('BASE_URL','http://localhost/crm');
-define('BASE_URI','crm/public');
+define('BASE_URL','__BASE_URL__');
+define('BASE_URI','__BASE_URI__');
 
 /**
  * JavaScript Libraries
@@ -22,8 +22,8 @@ define('GOOGLE_LOADER', 'http://www.google.com/jsapi');
  * print out a nice error message, encouraging users to report any problems
  * See: Blossom\Classes\Error
  */
-define('ADMINISTRATOR_NAME','Site Admin');
-define('ADMINISTRATOR_EMAIL','admin@servername.com');
+define('ADMINISTRATOR_NAME','__ADMINISTRATOR_NAME__');
+define('ADMINISTRATOR_EMAIL','__ADMINISTRATOR_EMAIL__');
 
 /**
  * Database Setup
@@ -31,10 +31,10 @@ define('ADMINISTRATOR_EMAIL','admin@servername.com');
  * http://www.php.net/manual/en/pdo.drivers.php
  */
 define('DB_ADAPTER','Pdo_Mysql');
-define('DB_HOST','db');
-define('DB_NAME','open311');
-define('DB_USER','root');
-define('DB_PASS','eindhoven');
+define('DB_HOST','__DB_HOST__');
+define('DB_NAME','__DB_NAME__');
+define('DB_USER','__DB_USER__');
+define('DB_PASS','__DB_PASS__');
 
 /**
  * Directory Configuration
@@ -81,19 +81,19 @@ $DIRECTORY_CONFIG = array(
 //define('CAS_SERVER','cas.somewhere.org');
 //define('CAS_URI','cas');
 
-define('DATE_FORMAT', 'n/j/Y H:i:s');
+define('DATE_FORMAT', '__DATE_FORMAT__');
 
 /**
  * Controls whether the system sends email notifications to people
  */
-define('NOTIFICATIONS_ENABLED',true);
+define('NOTIFICATIONS_ENABLED',__NOTIFICATIONS_ENABLED__);
 
 /**
  * Point to the Solr server
  */
-define('SOLR_SERVER_HOSTNAME', 'solr');
-define('SOLR_SERVER_PORT', 8983);
-define('SOLR_SERVER_PATH', '/solr/crm');
+define('SOLR_SERVER_HOSTNAME', '__SOLR_SERVER_HOSTNAME__');
+define('SOLR_SERVER_PORT', __SOLR_SERVER_PORT__);
+define('SOLR_SERVER_PATH', '__SOLR_SERVER_PATH__');
 
 
 /**
@@ -110,8 +110,8 @@ define('SOLR_SERVER_PATH', '/solr/crm');
 /**
  * Some default values for Tickets in the system
  */
-define('DEFAULT_CITY','Bloomington');
-define('DEFAULT_STATE','IN');
+define('DEFAULT_CITY','__DEFAULT_CITY__');
+define('DEFAULT_STATE','__DEFAULT_STATE__');
 
 /**
  * Default coordinates for map center
@@ -138,12 +138,12 @@ define('DEFAULT_LONGITUDE',ini_get('date.default_longitude'));
  *
  * Open311 servers typically use their domain name as their jurisdiction
  */
-define('OPEN311_JURISDICTION','localhost');
-define('OPEN311_KEY_SERVICE', 'http://localhost/open311-api-key-request');
+define('OPEN311_JURISDICTION','__OPEN311_JURISDICTION__');
+define('OPEN311_KEY_SERVICE', '__OPEN311_KEY_SERVICE__');
 
-define('THUMBNAIL_SIZE', 150);
+define('THUMBNAIL_SIZE', __THUMBNAIL_SIZE__);
 
-define('CLOSING_COMMENT_REQUIRED_LENGTH', 1);
-define('AUTO_CLOSE_COMMENT', 'Closed automatically');
+define('CLOSING_COMMENT_REQUIRED_LENGTH', __CLOSING_COMMENT_REQUIRED_LENGTH__);
+define('AUTO_CLOSE_COMMENT', '__AUTO_CLOSE_COMMENT__');
 
-define('LOCALE', 'en_US');
+define('LOCALE', '__LOCALE__');

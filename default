@@ -1,15 +1,24 @@
-Alias / "/webdir"
-<Directory "/webdir">
+#-------------------------------------------------------------------------
+# This Virtual Host config is intended to redirect all traffic from
+# the unencrypted versions of the application to the encrypted version
+#-------------------------------------------------------------------------
+NameVirtualHost *:80
+
+#------------------------------------------------------------------------
+# Citizen reporting and work tracking system
+#------------------------------------------------------------------------
+Alias /crm "/var/www/html/crm/public"
+<Directory "/var/www/html/crm/public">
     Options FollowSymLinks
     AllowOverride None
     Require all granted
 
     RewriteEngine On
-    RewriteBase /
+    RewriteBase /crm
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_URI} !/media/[0-9]{4}
-    RewriteRule .? /index.php [NC,L]
+    RewriteRule .? /crm/index.php [NC,L]
 
     php_value post_max_size 10M
     php_value upload_max_filesize 10M
