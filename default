@@ -11,8 +11,8 @@ NameVirtualHost *:80
 # Citizen reporting and work tracking system
 #------------------------------------------------------------------------
 
-Alias __BASE_URI__ "/var/www/sites/crm/public"
-<Directory "/var/www/sites/crm/public">
+Alias __BASE_URI__ "/var/www/html/crm/public"
+<Directory "/var/www/html/crm/public">
     Options FollowSymLinks
     AllowOverride None
     Require all granted
