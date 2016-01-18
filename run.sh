@@ -6,6 +6,8 @@ else
     a2enmod rewrite
 fi
 
+sed -i "s^__BASE_URI__^$BASE_URI^g" /etc/apache2/sites-available/default
+
 sed -i "s/__APPLICATION_NAME__/$APPLICATION_NAME/g" /webdir/crm/data/site_config.inc
 sed -i "s/__LOCATION_NAME__/$LOCATION_NAME/g" /webdir/crm/data/site_config.inc
 sed -i "s^__BASE_URL__^$BASE_URL^g" /webdir/crm/data/site_config.inc
