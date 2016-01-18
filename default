@@ -4,11 +4,15 @@
 #-------------------------------------------------------------------------
 NameVirtualHost *:80
 
+#<VirtualHost *:80>
+#    Redirect /crm https://localhost/crm
+#</VirtualHost*>
 #------------------------------------------------------------------------
 # Citizen reporting and work tracking system
 #------------------------------------------------------------------------
-Alias __BASE_URI__ "/var/www/html/crm/public"
-<Directory "/var/www/html/crm/public">
+
+Alias __BASE_URI__ "/var/www/sites/crm/public"
+<Directory "/var/www/sites/crm/public">
     Options FollowSymLinks
     AllowOverride None
     Require all granted
@@ -18,7 +22,7 @@ Alias __BASE_URI__ "/var/www/html/crm/public"
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_URI} !/media/[0-9]{4}
-    RewriteRule .? __BASE_URI__index.php [NC,L]
+    RewriteRule .? __BASE_URI__/index.php [NC,L]
 
     php_value post_max_size 10M
     php_value upload_max_filesize 10M
