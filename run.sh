@@ -32,6 +32,9 @@ sed -i "s/__CLOSING_COMMENT_REQUIRED_LENGTH__/$CLOSING_COMMENT_REQUIRED_LENGTH/g
 sed -i "s/__AUTO_CLOSE_COMMENT__/$AUTO_CLOSE_COMMENT/g" /webdir/crm/data/site_config.inc
 sed -i "s/__LOCALE__/$LOCALE/g" /webdir/crm/data/site_config.inc
 
+cd /webdir/crm/language
+./build_lang.sh
+
 chown www-data:www-data /webdir/crm -R
 rm /etc/apache2/sites-enabled/000-default.conf
 ln -s /etc/apache2/sites-available/default /etc/apache2/sites-enabled/000-default.conf

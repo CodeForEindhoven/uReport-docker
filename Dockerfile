@@ -6,6 +6,7 @@ RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -yq install \
         curl \
         git \
+        gettext \
         imagemagick \
         apache2 \
         libapache2-mod-php5 \
@@ -55,7 +56,7 @@ RUN chmod 755 /*.sh
 
 # Configure /webdir folder with sample app
 RUN mkdir -p /webdir
-RUN git clone --recursive https://github.com/City-of-Bloomington/uReport.git /webdir
+RUN git clone --recursive https://github.com/CodeForEindhoven/uReport.git /webdir
 RUN ln -s /webdir/crm /var/www/html/crm
 EXPOSE 80
 WORKDIR /webdir
