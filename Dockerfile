@@ -65,7 +65,6 @@ WORKDIR /webdir
 COPY configuration.inc /webdir/crm/configuration.inc
 COPY site_config.inc /webdir/crm/data/site_config.inc
 COPY default /etc/apache2/sites-available/default
-COPY index.html /var/www/index.html
 COPY solr5.sh /webdir/solr5.sh
 COPY schema.json /webdir/schema.json
 
