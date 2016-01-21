@@ -1,0 +1,286 @@
+{
+  "add-field":{
+     "name":"recordKey",
+     "type":"string",
+     "indexed": true,
+     "stored": true,
+     "required": true,
+     "omitNorms": true,
+     "omitTermFreqAndPositions": true
+  },
+  "add-field":{
+     "name":"recordType",
+     "type":"string",
+     "indexed": true,
+     "stored": true,
+     "required": true
+  },
+  "add-field":{
+     "name":"enteredDate",
+     "type":"date",
+     "indexed": true,
+     "stored": true
+  },
+  "add-field":{
+    "name": "coordinates",
+    "type": "location",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "description",
+    "type": "text_general",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "closedDate",
+    "type": "date",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "slaDays",
+    "type": "int",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "department_id",
+    "type": "int",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "category_id",
+    "type": "int",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "client_id",
+    "type": "int",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "substatus_id",
+    "type": "int",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "address_id",
+    "type": "int",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "status",
+    "type": "string",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "location",
+    "type": "string",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "city",
+    "type": "string",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "state",
+    "type": "string",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "zip",
+    "type": "string",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "displayPermissionLevel",
+    "type": "string",
+    "indexed": true,
+    "stored": false
+  },
+  "add-field":{
+    "name": "enteredByPerson_id",
+    "type": "int",
+    "indexed": true,
+    "stored": false
+  },
+  "add-field":{
+    "name": "assignedPerson_id",
+    "type": "int",
+    "indexed": true,
+    "stored": false
+  },
+  "add-field":{
+    "name": "referredPerson_id",
+    "type": "int",
+    "indexed": true,
+    "stored": false
+  },
+  "add-field":{
+    "name": "latitude",
+    "type": "float",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "longitude",
+    "type": "float",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "cluster_id_0",
+    "type": "int",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "cluster_id_1",
+    "type": "int",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "cluster_id_2",
+    "type": "int",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "cluster_id_3",
+    "type": "int",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "cluster_id_4",
+    "type": "int",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "cluster_id_5",
+    "type": "int",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "cluster_id_6",
+    "type": "int",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "issueType_id",
+    "type": "int",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "label_id",
+    "type": "int",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "contactMethod_id",
+    "type": "int",
+    "indexed": true,
+    "stored": true
+  },
+  "add-field":{
+    "name": "reportedByPerson_id",
+    "type": "int",
+    "indexed": true,
+    "stored": false
+  },
+  "add-field":{
+    "name": "department",
+    "type": "string",
+    "indexed": true,
+    "stored": false
+  },
+  "add-field":{
+    "name": "category",
+    "type": "string",
+    "indexed": true,
+    "stored": false
+  },
+  "add-field":{
+    "name": "client",
+    "type": "string",
+    "indexed": true,
+    "stored": false
+  },
+  "add-field":{
+    "name": "substatus",
+    "type": "string",
+    "indexed": true,
+    "stored": false
+  },
+  "add-field":{
+    "name": "enteredByPerson",
+    "type": "string",
+    "indexed": true,
+    "stored": false
+  },
+  "add-field":{
+    "name": "assignedPerson",
+    "type": "string",
+    "indexed": true,
+    "stored": false
+  },
+  "add-field":{
+    "name": "referredPerson",
+    "type": "string",
+    "indexed": true,
+    "stored": false
+  },
+  "add-field":{
+    "name": "issueType",
+    "type": "string",
+    "indexed": true,
+    "stored": false,
+    "multiValued": true
+  },
+  "add-field":{
+    "name": "label",
+    "type": "string",
+    "indexed": true,
+    "stored": false,
+    "multiValued": true
+  },
+  "add-field":{
+    "name": "contactMethod",
+    "type": "string",
+    "indexed": true,
+    "stored": false,
+    "multiValued": true
+  },
+  "add-field":{
+    "name": "reportedByPerson",
+    "type": "string",
+    "indexed": true,
+    "stored": false,
+    "multiValued": true
+  },
+  "add-dynamic-field":{
+    "name": "*",
+    "type": "string",
+    "indexed": true,
+    "stored": true
+  }
+}

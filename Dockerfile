@@ -40,6 +40,7 @@ ENV NOTIFICATIONS_ENABLED true
 ENV SOLR_SERVER_HOSTNAME localhost
 ENV SOLR_SERVER_PORT 8983
 ENV SOLR_SERVER_PATH /solr/crm
+ENV SOLR_CORE crm
 ENV DEFAULT_CITY Bloomington
 ENV DEFAULT_STATE IN
 ENV OPEN311_JURISDICTION localhost
@@ -64,5 +65,8 @@ WORKDIR /webdir
 COPY configuration.inc /webdir/crm/configuration.inc
 COPY site_config.inc /webdir/crm/data/site_config.inc
 COPY default /etc/apache2/sites-available/default
+COPY index.html /var/www/index.html
+COPY solr5.sh /webdir/solr5.sh
+COPY schema.json /webdir/schema.json
 
 CMD ["/run.sh"]

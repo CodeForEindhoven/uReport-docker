@@ -7,6 +7,7 @@ else
 fi
 
 sed -i "s^__BASE_URI__^$BASE_URI^g" /etc/apache2/sites-available/default
+sed -i "s^__BASE_URI__^$BASE_URI^g" /var/www/index.html
 
 sed -i "s/__APPLICATION_NAME__/$APPLICATION_NAME/g" /webdir/crm/data/site_config.inc
 sed -i "s/__LOCATION_NAME__/$LOCATION_NAME/g" /webdir/crm/data/site_config.inc
@@ -31,7 +32,12 @@ sed -i "s/__THUMBNAIL_SIZE__/$THUMBNAIL_SIZE/g" /webdir/crm/data/site_config.inc
 sed -i "s/__CLOSING_COMMENT_REQUIRED_LENGTH__/$CLOSING_COMMENT_REQUIRED_LENGTH/g" /webdir/crm/data/site_config.inc
 sed -i "s/__AUTO_CLOSE_COMMENT__/$AUTO_CLOSE_COMMENT/g" /webdir/crm/data/site_config.inc
 sed -i "s/__LOCALE__/$LOCALE/g" /webdir/crm/data/site_config.inc
+sed -i "s/__SOLR_SERVER_HOSTNAME__/$SOLR_SERVER_HOSTNAME/g" /webdir/solr5.sh
+sed -i "s/__SOLR_SERVER_PORT__/$SOLR_SERVER_PORT/g" /webdir/solr5.sh
+sed -i "s^__SOLR_SERVER_PATH__^$SOLR_SERVER_PATH^g" /webdir/solr5.sh
+sed -i "s^__SOLR_CORE__^$SOLR_CORE^g" /webdir/solr5.sh
 
+chmod a+x solr5.sh
 cd /webdir/crm/language
 ./build_lang.sh
 
@@ -39,6 +45,5 @@ chown www-data:www-data /webdir/crm -R
 rm /etc/apache2/sites-enabled/000-default.conf
 ln -s /etc/apache2/sites-available/default /etc/apache2/sites-enabled/000-default.conf
 source /etc/apache2/envvars
-a2enmod rewrite
 tail -F /var/log/apache2/* &
 exec apache2 -D FOREGROUND
