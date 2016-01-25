@@ -19,6 +19,7 @@
      "name":"enteredDate",
      "type":"date",
      "indexed": true,
+     "omitNorms": false,
      "stored": true
   },
   "add-field":{
