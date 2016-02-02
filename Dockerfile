@@ -57,7 +57,7 @@ RUN chmod 755 /*.sh
 
 # Configure /webdir folder with sample app
 RUN mkdir -p /webdir
-RUN git clone --recursive https://github.com/CodeForEindhoven/uReport.git /webdir
+RUN git clone --branch bootstrap-version --recursive https://github.com/CodeForEindhoven/uReport.git /webdir
 RUN ln -s /webdir/crm /var/www/html/crm
 EXPOSE 80
 WORKDIR /webdir

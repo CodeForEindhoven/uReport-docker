@@ -12,7 +12,7 @@ define('BASE_URI','__BASE_URI__');
 /**
  * JavaScript Libraries
  */
-define('JQUERY',      BASE_URI.'/js/vendor/jquery-2.1.1');
+define('JQUERY',      BASE_URI.'/js/vendor/jquery-2.2.0');
 define('JQUERY_UI',   BASE_URI.'/js/vendor/jquery-ui-1.11.1');
 define('GOOGLE_MAPS',   'http://maps.googleapis.com/maps/api/js?sensor=false');
 define('GOOGLE_LOADER', 'http://www.google.com/jsapi');
