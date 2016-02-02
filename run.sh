@@ -7,12 +7,9 @@ else
 fi
 
 sed -i "s^__BASE_URI__^$BASE_URI^g" /etc/apache2/sites-available/default
-sed -i "s^__BASE_URI__^$BASE_URI^g" /var/www/index.html
 
 sed -i "s/__APPLICATION_NAME__/$APPLICATION_NAME/g" /webdir/crm/data/site_config.inc
 sed -i "s/__LOCATION_NAME__/$LOCATION_NAME/g" /webdir/crm/data/site_config.inc
-sed -i "s^__BASE_URL__^$BASE_URL^g" /webdir/crm/data/site_config.inc
-sed -i "s^__BASE_URI__^$BASE_URI^g" /webdir/crm/data/site_config.inc
 sed -i "s/__ADMINISTRATOR_NAME__/$ADMINISTRATOR_NAME/g" /webdir/crm/data/site_config.inc
 sed -i "s/__ADMINISTRATOR_EMAIL__/$ADMINISTRATOR_EMAIL/g" /webdir/crm/data/site_config.inc
 sed -i "s^__DB_HOST__^$DB_HOST^g" /webdir/crm/data/site_config.inc

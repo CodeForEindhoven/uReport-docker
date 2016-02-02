@@ -27,7 +27,6 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
 ENV ALLOW_OVERRIDE **False**
 ENV APPLICATION_NAME CRM
 ENV LOCATION_NAME City of Bloomington, Mark Kruzan, Mayor
-ENV BASE_URL http://localhost/crm
 ENV BASE_URI /crm
 ENV ADMINISTRATOR_NAME Site Admin
 ENV ADMINISTRATOR_EMAIL admin@servername.com
