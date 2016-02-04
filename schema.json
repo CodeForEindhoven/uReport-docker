@@ -189,7 +189,8 @@
     "name": "issueType_id",
     "type": "int",
     "indexed": true,
-    "stored": true
+    "stored": true,
+    "multiValued": true
   },
   "add-field":{
     "name": "label_id",
@@ -201,7 +202,8 @@
     "name": "contactMethod_id",
     "type": "int",
     "indexed": true,
-    "stored": true
+    "stored": true,
+    "multiValued": true
   },
   "add-field":{
     "name": "reportedByPerson_id",
