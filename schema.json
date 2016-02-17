@@ -196,7 +196,8 @@
     "name": "label_id",
     "type": "int",
     "indexed": true,
-    "stored": true
+    "stored": true,
+    "multiValued": true
   },
   "add-field":{
     "name": "contactMethod_id",

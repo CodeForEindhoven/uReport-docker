@@ -17,7 +17,8 @@ RUN apt-get update && \
         php5-curl \
         php-pear \
         php-apc && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* &&\
+    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN /usr/sbin/php5enmod mcrypt
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
     sed -i "s/variables_order.*/variables_order = \"EGPCS\"/g" /etc/php5/apache2/php.ini
@@ -59,8 +60,11 @@ RUN mkdir -p /webdir
 RUN git clone --branch bootstrap-version --recursive https://github.com/CodeForEindhoven/uReport.git /webdir
 RUN ln -s /webdir/crm /var/www/html/crm
 EXPOSE 80
-WORKDIR /webdir
 
+WORKDIR /webdir/crm
+RUN composer install --prefer-source --no-interaction
+
+WORKDIR /webdir
 COPY configuration.inc /webdir/crm/configuration.inc
 COPY site_config.inc /webdir/crm/data/site_config.inc
 COPY default /etc/apache2/sites-available/default
