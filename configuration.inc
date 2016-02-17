@@ -4,8 +4,6 @@
  */
 define('APPLICATION_HOME', __DIR__);
 define('BLOSSOM', APPLICATION_HOME.'/libraries/Blossom');
-define('ZEND',    APPLICATION_HOME.'/libraries/zf2/library/Zend');
-define('SOLR',    APPLICATION_HOME.'/libraries/solr-php-client');
 
 /**
  * Multi-Site support
@@ -67,13 +65,11 @@ define('IMAGEMAGICK','/usr/bin');
 /**
  * Enable autoloading for the PHP libraries
  */
-require_once ZEND.'/Loader/AutoloaderFactory.php';
 $config = [
 	'Zend\Loader\StandardAutoloader' => [
 		'namespaces' => [
 			'Application' => APPLICATION_HOME,
-			'Blossom'     => BLOSSOM,
-			'Zend'        => ZEND
+			'Blossom'     => BLOSSOM
 		]
 	]
 ];
