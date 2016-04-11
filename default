@@ -12,7 +12,7 @@ Alias __BASE_URI__ "/var/www/html/crm/public"
     RewriteBase __BASE_URI__
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_URI} !/media/[0-9]{4}
+    #RewriteCond %{REQUEST_URI} !/media/[0-9]{4}
     RewriteRule .? __BASE_URI__/index.php [NC,L]
 
     php_value post_max_size 10M
