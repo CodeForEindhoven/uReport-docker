@@ -1,6 +1,7 @@
 <?php
 define('APPLICATION_NAME','__APPLICATION_NAME__');
 define('LOCATION_NAME', '__LOCATION_NAME__');
+define('THEME', '__APPLICATION_THEME__');
 
 /**
  * JavaScript Libraries
